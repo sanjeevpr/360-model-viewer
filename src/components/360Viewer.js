@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-// import "./App.css";
-import { images } from '../assets/images'
 import $ from 'jquery';
 import './360Viewer.css'
+import { images } from '../assets/images'
 
 // You can play with this to adjust the sensitivity
 // higher values make mouse less sensitive
@@ -26,7 +25,6 @@ class Viewer extends Component {
   componentDidMount = () => {
     document.addEventListener("mousemove", this.handleMouseMove, false);
     document.addEventListener("mouseup", this.handleMouseUp, false);
-    // document.addEventListener("scroll", this.zoomImage, false);
 
     const script = document.createElement('script');
     script.src = "https://code.jquery.com/jquery-3.5.1.min.js";
@@ -44,7 +42,7 @@ class Viewer extends Component {
     document.removeEventListener("mouseup", this.handleMouseUp, false);
   };
 
-  scrolled(e){
+  scrolled(e) {
     var container = $('#container');
     var offset = container.offset()
     zoom_point.x = e.pageX - offset.left
@@ -70,7 +68,6 @@ class Viewer extends Component {
     pos.x = -zoom_target.x * scale + zoom_point.x
     pos.y = -zoom_target.y * scale + zoom_point.y
 
-
     // Make sure the slide stays in its container area when zooming out
     if(pos.x>0)
         pos.x = 0
@@ -84,19 +81,6 @@ class Viewer extends Component {
         target.css('transform','translate('+(pos.x)+'px,'+(pos.y)+'px) scale('+scale+','+scale+')')
 
     }
-  
-//   zoomImage = event => {
-//     var height = $('#image').height();
-//     var width = $('#image').width();
-//     console.log(event.nativeEvent.wheelDelta);
-//     if(event.nativeEvent.wheelDelta > 0) {
-//         height += 10;
-//         width += 10;
-//     } else {
-//         height -= 10;
-//         width -= 10;
-//     }
-//   }
 
   handleMouseDown = event => {
     event.persist();
