@@ -1,3 +1,7 @@
+# 360 Product Viewer
+
+360 Product Viewer is a project created using React. You can view a product/model in 360 degrees like in the shopping apps. It uses a set of images to create the 360 degree rotating effect on mouse move. It also has the ability to zoom/scale into the image smoothly.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +70,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# 360-model-viewer
