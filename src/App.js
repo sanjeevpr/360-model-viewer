@@ -1,13 +1,12 @@
 import React from 'react';
-import '@google/model-viewer/dist/model-viewer';
 import './App.css';
-import ModelViewer from './components/ModelViewer'
+import Viewer from './components/360Viewer'
 
 function App() {
   return (
-    <div>
-    <p>Hello</p>
-      <ModelViewer />
+    <div className="App">
+      <h1>360 Car Viewer</h1>
+      <Viewer />
     </div>
   );
 }

@@ -1,0 +1,18 @@
+#container {
+  width: 799px;
+  height: 533px;
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#slide {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+#image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
